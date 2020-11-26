@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "05621fcf-a20f-47bf-9971-6f28dd4aaacd",
+		"name": "multiple database node mongoose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MyCients",
+			"item": [
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiX2lkIjoiNWZiZjY1ZDU5OTQ2YjgzNWU4Yzg5NTBjIiwiZW1haWwiOiJoYW1kaS5yYWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQwOCRIL3BqMVZFV2JCVW1rRVR3WTNlRXdlZkpNL3VSdnZ2SzUvYWRyTGZwQXdOMG5iUUhEYmcyUyIsInVzZXJuYW1lIjoiaGFtZGkiLCJjcmVhdGVkQXQiOiIyMDIwLTExLTI2VDA4OjIyOjQ1LjU0MVoiLCJ1cGRhdGVkQXQiOiIyMDIwLTExLTI2VDA4OjIyOjQ1LjU0MVoiLCJfX3YiOjB9LCJpYXQiOjE2MDYzODM3MTEsImV4cCI6MTYwNjU2MzcxMX0.D4XUzuxNy2fusCLc9el4El5pdaHVeWCzKmXGwPrdGrY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subdomain\": \"hamdii\",\r\n    \"dbUrl\":\"hamdii\",\r\n    \"name\": \"hamdii\",\r\n    \"email\": \"hamdiirahal@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/myclients/update/5fbf66789946b835e8c8950d",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"myclients",
+								"update",
+								"5fbf66789946b835e8c8950d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"subdomain\": \"hamdi\",\r\n    \"dbUrl\":\"hamdi\",\r\n    \"name\": \"hamdi\",\r\n    \"email\": \"hamdi.rahal@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/api/myclients/register",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"api",
+								"myclients",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"hamdi.rahal@gmail.com\",\r\n    \"password\": \"79Wn2BrFcw\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/api/user/login",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiX2lkIjoiNWZiZjk1ZjFmZmU4N2EyOGE0MTRlYTU3IiwiZW1haWwiOiJoYW1kaS5yYWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQwOCRWNWp5R1NSZU90dnU3NkQ5Yk8zeGlPOFJ2M0tIUklXMFZDSndvdFo1eWJMTm4wQ1pGcEVyRyIsInVzZXJuYW1lIjoiaGFtZGkiLCJjcmVhdGVkQXQiOiIyMDIwLTExLTI2VDExOjQ4OjAxLjg0OVoiLCJ1cGRhdGVkQXQiOiIyMDIwLTExLTI2VDExOjQ4OjAxLjg0OVoiLCJfX3YiOjB9LCJpYXQiOjE2MDYzOTI4MTgsImV4cCI6MTg2NTU5MjgxOH0.nAhwjefQWTF0ZcL7dllRMZCDgp2FmCmT7TNupmSntMc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/api/user/refresh-tokens",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"refresh-tokens"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgot password",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"hamdi.rahal@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/api/user/forget-password",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"forget-password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update password",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOnsiX2lkIjoiNWZiZjk1ZjFmZmU4N2EyOGE0MTRlYTU3IiwiZW1haWwiOiJoYW1kaS5yYWhhbEBnbWFpbC5jb20iLCJwYXNzd29yZCI6IiQyYSQwOCRldUVVYXBCUjBpSjdJTXY3NXBUWWR1VFNFYVViSjlvMVlLbVkuS3lWWEkuN3g5NHJmNGl0bSIsInVzZXJuYW1lIjoiaGFtZGkiLCJjcmVhdGVkQXQiOiIyMDIwLTExLTI2VDExOjQ4OjAxLjg0OVoiLCJ1cGRhdGVkQXQiOiIyMDIwLTExLTI2VDEyOjE3OjQzLjY5NloiLCJfX3YiOjB9LCJpYXQiOjE2MDYzOTMwOTksImV4cCI6MTYwNjU3MzA5OX0.Dsi8EJfKdZX52TOXuNdbEZ7tO6dy8AfZfoAeaiHWIb0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"oldPassword\": \"79Wn2BrFcw\",\r\n    \"newPassword\": \"Test123.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL1}}/api/user/update-password",
+							"host": [
+								"{{baseURL1}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update-password"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b35a7fe9-1e37-476f-a291-c9898e872ea8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "17d4e9de-2b97-4e0c-8870-19ed111de8ca",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "477fde7c-9ab8-41eb-a62c-90c85094742e",
+			"key": "baseURL1",
+			"value": "http://hamdi.localhost.com.tn:5000"
+		},
+		{
+			"id": "af9660f6-4978-49b4-b8c1-0c53450eff93",
+			"key": "baseURL",
+			"value": "http://localhost:5000"
+		},
+		{
+			"id": "55f992a2-a316-4d03-a74a-572e56231fe2",
+			"key": "token",
+			"value": ""
+		},
+		{
+			"id": "250b0cd5-919f-412f-b1d4-12873aabea37",
+			"value": "",
+			"disabled": true
+		}
+	],
+	"protocolProfileBehavior": {}
+}
